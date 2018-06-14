@@ -41,6 +41,7 @@ P(B|A):2  <br>
 2。No <br>
 <br>
 答案：2  <br>
+
 We can't have interdependent variables.<br>
  For those cases we can either join random variables into one random variable <br>
  or use Markov Random Fields (MRF) <br>
