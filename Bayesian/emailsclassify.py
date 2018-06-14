@@ -12,7 +12,7 @@ allWords = []
 
 def getWordFromFile(txtFile):
     words = []
-    with open(txtFile,encoding='utf8') as fp:
+    with open('./data/' + txtFile,encoding='utf8') as fp:
         for line in fp:
             line = line.strip()
             #过滤干扰字符或无效字符
@@ -45,8 +45,9 @@ for words in allWords:
 vector = array(vector)
 labels = array([1]*127 + [0]*24)
 
+print(labels)
 #创建模型，使用已知训练集进行训练
-model = MultinomialNB
+model = MultinomialNB()
 model.fit(vector,labels)
 
 #使用训练好的模型对未知邮件内容进行分类
